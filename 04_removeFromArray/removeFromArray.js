@@ -5,10 +5,16 @@ const removeFromArray = function() {
     finalArr = arr;
     len = arguments.length;
     for (i = 1; i < len; i++) {
-        if (typeof arguments[i] == "number" && arguments[i] <= len){
+        if (arr.includes(arguments[i])) {
             index = finalArr.indexOf(arguments[i]);
             finalArr.splice(index, 1);
         }
+        /*
+        if (typeof arguments[i] == "number" && arguments[i] <= arr.length){
+            index = finalArr.indexOf(arguments[i]);
+            finalArr.splice(index, 1);
+        }
+        */
     }
     return finalArr;
 };
@@ -16,3 +22,4 @@ const removeFromArray = function() {
 
 // Do not edit below this line
 module.exports = removeFromArray;
+
